@@ -7,6 +7,10 @@
     {% for item in tasks %}
         <tr>
             <td>{{ item.title }}</td>
+            <td>
+
+                <a href="{% url "detail" item.id %}">Details</a>
+            </td>
         </tr>
         {% empty %}
         <h2>You did not create task</h2>
