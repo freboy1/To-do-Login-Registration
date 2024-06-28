@@ -9,8 +9,8 @@
         <tr>
             <td>{{ item.title }}</td>
             <td>
-
                 <a href="{% url "detail" item.id %}">Details</a>
+                <a href="{% url "update" item.id %}">Update</a>
             </td>
         </tr>
         {% empty %}
