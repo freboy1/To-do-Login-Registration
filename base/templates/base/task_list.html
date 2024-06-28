@@ -11,6 +11,7 @@
             <td>
                 <a href="{% url "detail" item.id %}">Details</a>
                 <a href="{% url "update" item.id %}">Update</a>
+                <a href="{% url "delete" item.id %}">Delete</a>
             </td>
         </tr>
         {% empty %}
