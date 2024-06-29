@@ -8,6 +8,9 @@ from .models import Task
 from django.contrib.auth.views import LoginView
 
 
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'
     fields = '__all__'
@@ -18,7 +21,7 @@ class CustomLoginView(LoginView):
 
 
 # Create your views here.
-class TaskList(ListView):
+class TaskList(LoginRequiredMixin, ListView):
     model = Task
     context_object_name = 'tasks'
 
